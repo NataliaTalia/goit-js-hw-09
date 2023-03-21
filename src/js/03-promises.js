@@ -40,7 +40,7 @@ function createPromise(position, delay) {
 formRef.addEventListener('submit', (e) => {
   e.preventDefault();
   
-  btnRef.disabled = true;
+ 
   const delay = Number(formRef.elements.delay.value);
   console.log(delay);
   const step = Number(formRef.elements.step.value);
