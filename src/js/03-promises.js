@@ -11,7 +11,7 @@ const formRef = document.querySelector('.form');
 const delayRef = document.querySelector('[name="delay"]');
 const stepsRef = document.querySelector('[name="step"]');
 const amountRef = document.querySelector('[name="amount"]');
-//const btnRef = document.querySelector('button');
+const btnRef = document.querySelector('button');
 
 
 
@@ -40,6 +40,7 @@ function createPromise(position, delay) {
 formRef.addEventListener('submit', (e) => {
   e.preventDefault();
   
+  btnRef.disabled = true;
   const delay = Number(formRef.elements.delay.value);
   console.log(delay);
   const step = Number(formRef.elements.step.value);
