@@ -13,13 +13,18 @@ const startBtnRef = document.querySelector('button[data-start]');
 const stopBtnRef = document.querySelector('button[data-stop]');
 
 let intervalId = null;
+stopBtnRef.disabled = true;
+
 startBtnRef.addEventListener('click', onClick);
+
 
 function onClick() {
     startBtnRef.disabled = true;
     intervalId = setInterval(() => {
         bodyRef.style.backgroundColor = getRandomHexColor();
         }, 1000)
+
+        stopBtnRef.disabled = false;
 }
 
 stopBtnRef.addEventListener('click', onCahngeColorStop);
@@ -27,4 +32,5 @@ stopBtnRef.addEventListener('click', onCahngeColorStop);
 function onCahngeColorStop() {
     startBtnRef.disabled = false;
     clearInterval(intervalId);
+    stopBtnRef.disabled = true;
 }

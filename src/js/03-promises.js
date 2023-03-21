@@ -51,7 +51,7 @@ formRef.addEventListener('submit', (e) => {
 
   let promiseDelay = delay;
 
-  for(i = 1; i <= amount; i+=1) {
+  for(let i = 1; i <= amount; i+=1) {
     position += i;
     promiseDelay += step;
 
@@ -65,4 +65,5 @@ formRef.addEventListener('submit', (e) => {
 
   }
   
+  formRef.reset()
 })

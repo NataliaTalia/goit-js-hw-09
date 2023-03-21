@@ -6,11 +6,11 @@ import Notiflix from 'notiflix';
 
 
 
-startBtnRef = document.querySelector('button[data-start]');
-daysRef = document.querySelector('span[data-days]');
-hoursRef = document.querySelector('span[data-hours]');
-minRef = document.querySelector('span[data-minutes]');
-secRef = document.querySelector('span[data-seconds]');
+const startBtnRef = document.querySelector('button[data-start]');
+const daysRef = document.querySelector('span[data-days]');
+const hoursRef = document.querySelector('span[data-hours]');
+const minRef = document.querySelector('span[data-minutes]');
+const secRef = document.querySelector('span[data-seconds]');
 
 function updateClockface ({days, hours, minutes, seconds}) {
     
