@@ -11,6 +11,7 @@ const daysRef = document.querySelector('span[data-days]');
 const hoursRef = document.querySelector('span[data-hours]');
 const minRef = document.querySelector('span[data-minutes]');
 const secRef = document.querySelector('span[data-seconds]');
+startBtnRef.disabled = true;
 
 function updateClockface ({days, hours, minutes, seconds}) {
     

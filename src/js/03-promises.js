@@ -53,8 +53,8 @@ formRef.addEventListener('submit', (e) => {
   let promiseDelay = delay;
 
   for(let i = 1; i <= amount; i+=1) {
-    position += i;
-    promiseDelay += step;
+    
+    position += 1;
 
     createPromise(position, promiseDelay)
   .then(({ position, delay }) => {
@@ -63,7 +63,8 @@ formRef.addEventListener('submit', (e) => {
   .catch(({ position, delay }) => {
     Notiflix.Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
   });
-
+  
+  promiseDelay += step;
   }
   
   formRef.reset()
